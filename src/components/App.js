@@ -30,6 +30,8 @@ function App() {
     setClientName,
     clientAddress,
     setClientAddress,
+    clientNIC,
+    setClientNIC,
     invoiceNumber,
     setInvoiceNumber,
     invoiceDate,
@@ -54,7 +56,7 @@ function App() {
           <div className="bg-white p-5 rounded shadow">
             <div className="flex flex-col justify-center">
 
-              <article className="md:grid grid-cols-2 gap-10 md:mt-16">
+              <article className="md:grid grid-cols-2 gap-7 md:mt-2">
                 <div className="flex flex-col">
                   <label htmlFor="clientName">Enter your client's name</label>
                   <input
@@ -68,7 +70,6 @@ function App() {
                     onChange={(e) => setClientName(e.target.value)}
                   />
                 </div>
-
                 <div className="flex flex-col">
                   <label htmlFor="clientAddress">
                     Enter your client's address
@@ -82,6 +83,21 @@ function App() {
                     autoComplete="off"
                     value={clientAddress}
                     onChange={(e) => setClientAddress(e.target.value)}
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <label htmlFor="clientNIC">
+                    Enter your client's NIC No.
+                  </label>
+                  <input
+                    type="text"
+                    name="clientNIC"
+                    id="clientNIC"
+                    placeholder="Enter your client's NIC no"
+                    maxLength={70}
+                    autoComplete="off"
+                    value={clientNIC}
+                    onChange={(e) => setClientNIC(e.target.value)}
                   />
                 </div>
               </article>

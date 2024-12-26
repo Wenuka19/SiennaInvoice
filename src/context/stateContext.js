@@ -15,6 +15,7 @@ export default function StateContext({ children }) {
   const [website, setWebsite] = useState("");
   const [clientName, setClientName] = useState("");
   const [clientAddress, setClientAddress] = useState("");
+  const [clientNIC, setClientNIC] = useState("");
   const [invoiceNumber, setInvoiceNumber] = useState(1);
   const [invoiceDate, setInvoiceDate] = useState("");
   const [dueDate, setDueDate] = useState("");
@@ -147,6 +148,8 @@ export default function StateContext({ children }) {
     setWebsite,
     clientName,
     setClientName,
+    clientNIC,
+    setClientNIC,
     clientAddress,
     setClientAddress,
     invoiceNumber,
